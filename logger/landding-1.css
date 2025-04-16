@@ -296,9 +296,9 @@ main#notice > .title > .contact > .item > p{
   font-weight: bolder;
   margin: 10px 0;
 }
-/* main#notice > .map > h2{
-  background-color: #5D9AB2;
+main#notice > .title > .map > h2{
+  background-color: #2B5566;
   color: #fff;
   padding: 20px 0;
   text-align: center;
-} */
+}
