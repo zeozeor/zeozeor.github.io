@@ -1,0 +1,179 @@
+@charset "utf-8";
+
+/* reset.css */
+*{ margin: 0; padding: 0;}
+
+/* header 영역 */
+header{
+  /* 브라우저 한페이지로 기본사이즈 설정 */
+  height: 100vh;
+  background-image: url(images/mandarin.jpg);
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#head{
+  width: 500px;
+  text-align: center;
+  color: #fff;
+  background-color: rgba(0,0,0,0.5);
+  padding: 20px;
+  border-radius: 10px;
+}
+/* :nth-child = 부모 아래 자식들을 지정하여 적용할 때*/
+#head > p:nth-child(1){
+  font-size: 4rem;
+  letter-spacing: 1rem;
+  font-weight: bolder;
+}
+#head > p:nth-child(2){
+  font-size: 1.2rem;
+  margin: 1rem;
+}
+/* #head > div:nth-child(3){ */
+.button_style{
+  background-color: violet;
+  width: 150px;
+  font-size: 0.6rem;
+  padding: 10px;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  margin: auto;
+  cursor: pointer; /* 클릭할 수 있는 곳에 마우스 포인터 변경 */
+  color: #fff;
+}
+
+/* section id=sns 영역 */
+section#sns{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 50px;
+}
+section#sns > .card{
+  width: 300px;
+  text-align: center;
+}
+section#sns > .card > .icon{
+  background-color: #aaa;
+  width: 70px;
+  height: 70px;
+  margin: 20px auto;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section#sns > .card > .icon > i{
+  font-size: 2rem;
+  color: #fff;
+}
+section#sns > .card > p:nth-of-type(1){
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+section#sns > .card > p:nth-of-type(2){
+  font-size: 0.8rem;
+  color: #333;
+  line-height: 2;
+  padding: 10px;
+}
+section#sns > .card > a{
+  text-decoration: none;
+  color: #5D9AB2;
+  cursor: pointer;
+}
+section#sns > .card > a > span{
+  font-weight: bold;
+}
+
+#head > div:nth-child(3):hover{
+  background-color: rgb(124, 39, 124);
+}
+
+/* section id=detail 영역 */
+section#detail{
+  background-color: #5D9AB2;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+section#life{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  padding: 30px;
+}
+section#detail > div,
+section#life > div{
+  width: 400px;
+  padding: 50px;
+}
+section#detail > .img{
+  background-image: url(images/img01.jpg);
+  background-size: cover;
+  background-position: center;
+}
+section#life > .img{
+  background-image: url(images/img02.jpg);
+  background-size: cover;
+  background-position: center;
+}
+section#detail > .txt > p:nth-of-type(1),
+section#life > .txt > p:nth-of-type(1){
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+section#detail > .txt > p:nth-of-type(2),
+section#life > .txt > p:nth-of-type(2)
+{
+  font-size: 0.8rem;
+  line-height: 2;
+  padding: 10px 0;
+}
+section#detail > .txt > p:nth-of-type(3){
+  margin: 0;
+  text-align: center;
+}
+section#life > .txt > p:nth-of-type(3){
+  margin: 0;
+  text-align: center;
+}
+
+/* footer, id=title 영역 */
+footer{
+  background-color: #2B5566;
+  color: #fff;
+  padding: 20px;
+}
+footer a{ /* a 태그 전부 적용. 하위 태그 */
+  text-decoration: none; /* 링크 밑줄 제거 */
+  color: inherit; /* 부모의 컬러를 따름 */
+  font-size: 0.8rem;
+}
+footer > nav{ /* 가로로 전환, 해당 태그의 상위 부모를 잡음 */
+  display: flex;
+  gap: 30px;
+  margin-top: 30px;
+}
+footer > nav > div{
+  flex: 1;
+}
+footer > div > p:nth-of-type(1){
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 1rem;
+  margin: 10px 0px;
+}
+footer > nav > div > p{
+  border-bottom: 1px solid #fff;
+}
+footer > nav > div > ul{
+  list-style: none;
+}
+footer > nav > div > ul > li{
+  padding: 10px 0;
+  margin-left: 10px;
+}
