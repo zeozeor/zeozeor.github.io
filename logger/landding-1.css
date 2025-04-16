@@ -13,6 +13,37 @@ header{
   justify-content: center;
   align-items: center;
 }
+header > nav{
+  position: fixed;
+  width: 100%;
+  /* height: 50px; */
+  align-self: flex-start;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(255,255,255,0.7);
+}
+header > nav > h1{
+  font-size: 2rem;
+  padding: 20px;
+  background-color: #5D9AB2;
+  color: #fff;
+}
+header > nav > ul{
+  list-style: none;
+  margin-right: 30px;
+}
+header > nav > ul > li{
+  display: inline-block;
+  padding: 10px 20px;
+}
+header > nav > ul > li:hover{
+  background-color: #5D9AB2;
+}
+header > nav > ul > li >a{
+  text-decoration: none;
+  color: inherit;
+}
 #head{
   width: 500px;
   text-align: center;
@@ -177,3 +208,97 @@ footer > nav > div > ul > li{
   padding: 10px 0;
   margin-left: 10px;
 }
+
+/* ::content.html > main#content */
+main#content{
+  width: 50%;
+  margin: 0 auto;
+}
+main#content > div{
+  margin: 10px 0;
+}
+main#content > .detail > h2,
+main#about > .title > h2,
+main#notice > .title > h2{
+  border-left: 10px solid palevioletred;
+  padding-left: 10px;
+  margin: 20px 0;
+  font-size: 1.5rem;
+}
+main#content > .detail > p,
+main#about > .title > p{
+  margin: 20px 0;
+  font-size: 1rem;
+  line-height: 2;
+  text-align: justify;
+}
+main#content > .detail > img{
+  width: 100%;
+}
+
+/* about.html > main#about  */
+main#about > .title{
+  width: 50%;
+  margin: 0 auto;
+  text-align: justify;
+}
+main#about > .detail{
+  background-color: #5D9AB2;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 50px;
+}
+main#about > .detail > *{
+  width: 30%;
+  color: #fff;
+}
+main#about > .detail > table{
+  border-collapse: collapse; /* 테이블 합치기(세로) */
+  margin: 30px;
+}
+main#about > .detail > table > tbody > tr{
+  border-bottom: 1px solid #fff;
+  padding: 20px 0;
+}
+
+/* notice.html > main#notice */
+main#notice > .title{
+  width: 50%;
+  margin: 0 auto;
+}
+main#notice > .title > .contact{
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  margin: 30px;
+}
+main#notice > .title > .contact > .item{
+  border: 1px solid #888;
+  flex: 1;
+  text-align: center;
+  padding: 30px;
+}
+main#notice > .title > .contact > .item > div{
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #5D9AB2;
+  margin: 0 auto;
+  line-height: 80px;
+}
+main#notice > .title > .contact > .item > div > i{
+  font-size: 2rem;
+  color: #fff;
+}
+main#notice > .title > .contact > .item > p{
+  font-size: 1.3rem;
+  font-weight: bolder;
+  margin: 10px 0;
+}
+/* main#notice > .map > h2{
+  background-color: #5D9AB2;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+} */
