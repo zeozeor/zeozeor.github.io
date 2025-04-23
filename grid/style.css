@@ -5,6 +5,8 @@ body{
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
+  perspective: 900px;
+  background-color: #222;
 }
 
 /********** common *********/
@@ -16,11 +18,24 @@ body{
   font-size: 1.8rem;
   color: #eee;
 }
+input{
+  /* position: fixed;
+  z-index: 15; */
+  display: none;
+}
+input[id=check-icon]:checked ~ nav{
+  transform: rotateY(15deg);
+  opacity: 1;
+}
+input[id=check-icon]:checked ~ main{
+  transform: rotateY(-5deg);
+}
 
 
 /* **************************************** */
 /************ icon 영역 *************/
 #icon{
+  cursor: pointer;
   position: fixed; /*화면에 고정*/
   /* ▽ 위치값 */
   z-index: 10;
@@ -28,7 +43,7 @@ body{
   left: 30px;
   font-size: 2rem;
   color: #eee;
-  animation: icon-move 0.5s infinite alternate; /* alternate 효과 반전 */
+  animation: icon-move 0.5s infinite alternate; /* alternate 효과 반전_가장 많이 쓰이는 설정값 */
 }
 @keyframes icon-move {
   0%{
@@ -39,10 +54,51 @@ body{
   }
 }
 
+/********* nav ********/
+input[id=menu1]:checked ~ main > #box1,
+input[id=menu2]:checked ~ main > #box2,
+input[id=menu3]:checked ~ main > #box3{
+  opacity: 1;
+}
+input[id=menu1]:checked ~ main > #box1 > p,
+input[id=menu2]:checked ~ main > #box2 > p,
+input[id=menu3]:checked ~ main > #box3 > p{
+  transform: rotateY(0deg);
+}
+nav{
+  width: 150px;
+  height: 100%;
+  position: absolute;
+  background-color: #ddd;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  transform: rotateY(120deg);
+  transform-origin: left center;
+  opacity: 0;
+  transition: all 1s;
+}
+nav > img{
+  display: block;
+  width: 60%;
+  margin: 7rem auto;
+}
+nav > ul > li{
+  text-align: center;
+  margin: 2rem 0;
+  font-size: 1.5rem;
+}
+nav > ul > li > label{
+  cursor: pointer;
+}
+
 /********** main *********/
 main{
   height: 100%;
   position: relative;
+  transform: rotateY(0deg);
+  transform-origin: right center;
+  transition: all 1s;
 }
 main > section{
   width: 100%;
@@ -51,6 +107,11 @@ main > section{
   position: absolute;
   top: 0;
   left: 0;
+  opacity: 0;
+}
+main > section > p{
+  transform: rotateY(180deg);
+  transition: all 1s;
 }
 
 /* **************************************** */
@@ -63,6 +124,9 @@ section#box1 > p{
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+section#box1{
+  z-index: 10;
 }
 section#box1 > p:nth-child(1){
   display: flex;
