@@ -1,0 +1,421 @@
+$main-color: #00668e;
+$main-font: #333;
+$white-font: #eee;
+$gray-font: #999;
+$font-largy: 24px;
+$font-small: 10px;
+
+
+
+body{
+  background-color: #fafafa;
+}
+
+// 헤더 영역 *************************************************
+header{
+  width: 100%;
+  height: 900px;
+  background-image: url(../image/header.jpg);
+  color: $white-font;
+  position: relative;
+  nav{
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    margin: 0 auto;
+    img{
+      width: 170px;
+      height: 60px;
+      display: flex;
+    }
+    ul{
+      font-weight: bold;
+      display: flex;
+      justify-content: flex-end;
+      gap: 5rem;
+      }
+    .lang{
+      display: flex;
+      justify-content: flex-end;
+      p{
+        width: 80px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid $white-font;
+        border-radius: 15px;
+        font-size: 0.9rem;
+      }
+    }
+  }
+  .txt{
+    position: absolute;
+    top: 40%;
+    right: 15%;
+    width: 700px;
+    text-align: right;
+    p{
+      text-shadow: 2px 2px 3px #000;
+      &:nth-child(1){
+        font-weight: bolder;
+        font-size: 1.2rem;
+      }
+      &:nth-child(2){
+        font-weight: bolder;
+        font-size: 4rem;
+        padding: 10px 0;
+      }
+      &:nth-child(3),
+      &:nth-child(4){
+        font-size: 1.2rem;
+      }
+    }
+  }
+  .box{
+    position: absolute;
+    bottom: 30%;
+    right: 15%;
+    display: flex;
+    align-items: center;
+    .bar{
+      P{
+        display: inline-block;
+        width: 50px;
+        margin-bottom: 4px;
+        &:nth-child(1){
+          border-bottom: 3px solid #fff;
+        }
+        &:nth-child(2),
+        &:nth-child(3),
+        &:nth-child(4){
+          border-bottom: 3px solid rgba(255,255,255,0.5)
+        }
+      }
+    }
+    .play{
+      width: 50px;
+      height: 15px;
+      padding-left: 20px;
+      font-size: 0.8rem;
+      i{
+        &:nth-child(1){
+          display: inline-block;
+        }
+        &:nth-child(2){
+          padding-left: 5px;
+          display: inline-block;
+        }
+      }
+    }
+  }
+  .icon{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    i{
+      margin-top: 700px;
+      font-size: 2rem;
+    }
+  }
+}
+
+// 섹션 plan 영역 *************************************************
+section#plan{
+  .text{
+    text-align: center;
+    margin: 100px 0;
+    h2{
+      font-size: 3rem;
+      font-weight: 100;
+      color: #111;
+    }
+    p{
+      font-size: 1.4rem;
+      color: $gray-font;
+    }
+  }
+  .work{
+    ul{
+      display: flex;
+      width: 80%;
+      margin: 1rem auto;
+      li{
+        width: 300px;
+        height: 350px;
+        margin-bottom: 100px;
+        position: relative;
+        color: $white-font;
+        &::before{
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0,0,0,0.3);
+        }
+        &:nth-child(1){
+          background-image: url(../image/img01.jpg);
+          background-position: center;
+          background-size: cover;
+        }
+        &:nth-child(2){
+          background-image: url(../image/img02.jpg);
+          background-position: center;
+          background-size: cover;
+        }
+        &:nth-child(3){
+          background-image: url(../image/img03.jpg);
+          background-position: center;
+          background-size: cover;
+        }
+        &:nth-child(4){
+          background-image: url(../image/img04.jpg);
+          background-position: center;
+          background-size: cover;
+        }
+        &:nth-child(5){
+          background-image: url(../image/img05.jpg);
+          background-position: right;
+          background-size: cover;
+        }
+        p{
+          &:first-child{
+            position: absolute;
+            top: 40px;
+            left: 20px;
+            font-size: 2rem;
+            font-weight: bolder;
+            
+          }
+          &:last-child{
+            position: absolute;
+            bottom: 50px;
+            left: 20px;
+            font-weight: bolder;
+          }
+        }
+      }
+    }
+  }
+}
+
+// 섹션 news 영역 *************************************************
+section#news{
+  background-image: url(../image/news-bg.jpg);
+  background-size: cover;
+  margin: 0 auto;
+  position: relative;
+  padding: 50px 0;
+  .title{
+    padding-top: 70px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    h2{
+      font-size: 3rem;
+      font-weight: 100;
+      color: #111;
+    }
+    p{
+      font-size: 1.4rem;
+      color: $gray-font;
+      margin-bottom: 4rem;
+    }
+  }
+  .work{
+    ul{
+      width: 80%;
+      display: flex;
+      margin: 0 auto;
+      text-align: center;
+      padding-bottom: 100px;
+      li{
+        z-index: 1;
+        width: 25%;
+        img{
+          width: 360px;
+          height: 300px;
+          object-fit: cover;
+        }
+        p{
+          &:nth-of-type(1){
+            color: $main-color;
+            font-weight: bolder;
+            padding: 10px 0;
+            padding-left: 10px;
+            text-align: left;
+          }
+          &:nth-of-type(2){
+            padding: 10px 0;
+            width: 85%;
+            padding-left: 45px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            font-size: 1.3rem;
+            font-weight: bolder;
+          }
+          &:nth-of-type(3){
+            padding: 10px 0;
+            padding-left: 45px;
+            width: 85%;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #333;
+            text-align: left;
+          }
+          &:nth-of-type(4){
+            padding: 0 30px;
+            padding-left: 45px;
+            text-align: left;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #999;
+          }
+        }
+      }
+    }
+  }
+}
+#news::after{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255,255,255,0.9);
+}
+
+
+// 섹션 info 영역 *************************************************
+section#info{
+  background-color: #E4EBF5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  padding: 200px 0;
+  // margin: 2rem auto;
+  .won{
+    position: absolute;
+    top: 100px;
+    left: 200px;
+    img{
+      width: 220px;
+      height: 70px;
+      padding-bottom: 10px;
+      }
+    p{
+      &:nth-of-type(1){
+        font-size: 1.6rem;
+      }
+      &:nth-of-type(2){
+        font-size: 1.6rem;
+        color: $main-color;
+        font-weight: bolder;
+        padding-bottom: 20px;
+      }
+      &:nth-of-type(3),
+      &:nth-of-type(4){
+        font-size: 15px;
+      }
+    }
+  }
+  .circle{
+    ul{
+      display: flex;
+      gap: 50px;
+      position: absolute;
+      top: 100px;
+      right: 50px;
+      padding-right: 200px;
+      li{
+        img{
+          width: 200px;
+          height: 200px;
+        }
+        p{
+          text-align: center;
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
+
+
+
+// footer 영역 *************************************************
+footer{
+  background-color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  // width: 80%;
+  margin: 0 auto;
+  padding: 50px 10%;
+  color: #999;
+  div{
+    img{
+      // margin-left: 180px;
+      width: 200px;
+      height: 60px;
+    }
+  }
+  .add{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    ul{
+      margin-left: 20px;
+      text-align: left;
+      li{
+        &:first-child{
+          font-size: 0.8rem;
+          font-weight: bolder;
+          padding-bottom: 10px;
+          color: #eee;
+        }
+      }
+      li{
+        display: flex;
+        font-size: 0.8rem;
+        p{
+          &:nth-child(1){
+            margin-right: 20px;
+          }
+          &:nth-child(3){
+            padding-left: 20px;
+          }
+        }
+      }
+      li{
+        &:last-child{
+          padding-top: 10px;
+        }
+      }
+    }
+  }
+  .bar{
+    .box1{
+      display: flex;
+      div{
+        margin: 0 5px;
+        width: 150px;
+        height: 25px;
+        border: 1px solid #999;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 0.6rem;
+        color: #999;
+        }
+      }
+    }
+}
