@@ -1,0 +1,7 @@
+@charset "UPF-8";
+
+@import url('https://cdn.jsdelivr.net/gh/fonts-archive/Paperlogy/Paperlogy.css');
+
+body{
+  font-family: "Paperlogy", sans-serif;
+}
