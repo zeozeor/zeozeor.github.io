@@ -8,12 +8,13 @@
 html{
   /* 폰트 사이즈를 기본 10px로 설정. 사용자 오류를 막기 위해 백분률 10/16*100 값(62.5%)으로 입력 */
   /* font-size: 62.5%; */
-  font-size: 0.98vw;    /*wv 설정시 가변적.*/
-  behavior: smooth;
+    /* 0.98vw 는 1440 해상도 기준. 10px */
+  font-size: 0.98vw;    /*vw 설정시 가변적.*/
+  scroll-behavior: smooth;
 }
 body{
   background-color: #eee;
-  /* overflow: hidden; */
+  overflow-x: hidden;
 }
 
 /* logo 영역 ******************************************************* */
@@ -169,7 +170,6 @@ header > h1:before{
 article{
   width: 100%;
   height: 100vh;
-  border: 2px dashed red
 }
 
 /* about me */
@@ -276,9 +276,9 @@ section#about{
   font-size: var(--sub-font);
   color: var(--main-color);
   border: 1px solid var(--main-color);
-  border-radius: 5rem;
+  border-radius: 3rem;
   text-align: center;
-  padding: 1rem 0;
+  padding: 1rem;
 }
 .item-list{
   width: 100%;
@@ -304,11 +304,27 @@ section#about{
   aspect-ratio: 1/0.5;
   background-color: #888;
 }
+.img1 > .item:nth-child(1) > .item-img{
+  background-image: url(../images/clone-1.jpg);
+  background-size: cover;
+}
+.img1 > .item:nth-child(2) > .item-img{
+  background-image: url(../images/clone-2.jpg);
+  background-size: cover;
+}
+.img1 > .item:nth-child(3) > .item-img{
+  background-image: url(../images/clone-3.jpg);
+  background-size: cover;
+}
 .item-list > .item > .btn{
   display: flex;
   gap: 1rem;
 }
+.item-list > .item > .btn > p:hover{
+  filter: brightness(70%)
+}
 .item-list > .item > .btn > p{
+  cursor: pointer;
   flex: 1;
   background-color: var(--main-color);
   color: var(--sub-color);
@@ -336,8 +352,120 @@ section#about{
   gap: 3px;
 }
 .item-detail > li > .tool > p{
-  padding: 2px 10px;
+  padding: 3px 5px;
   border: 1px solid var(--main-color);
-  border-radius: 20px;
+  border-radius: 2rem;
+  /* text-align: center; */
+}
+
+/* practice project 영역 */
+article.practice{
+  padding: 5rem 0;
+  height: auto;
+}
+.practice .item-list{
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+
+/* skills */
+section#skills{
+  height: 100vh;
+  position: relative;
+}
+
+#skills h2{
+  font-size: 6rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+#skills > .skill-item > li{
+  position: absolute;
+  width: 250px;
+  height: 150px;
+  padding: 1rem 1.5rem;
+  font-size: 2rem;
+  font-weight: bolder;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+}
+#skills > .skill-item > li:hover{
+  filter: brightness(150%);
+}
+.shape1,.shape6{ border-radius: 50%; transform: rotate(20deg); }
+.shape2,.shape7{ border-radius: 20px;}
+.shape3,.shape8{ clip-path: circle(40%); }
+.shape4,.shape12{ clip-path: ellipse(60% 40% at 50% 50%); transform: rotate(-20deg);}
+.shape5,.shape10{ clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);}
+.shape11,.shape9,.shape513{ clip-path: inset(5% 20% 15% 10%); }
+/* background */
+.shape1,.shape2,.shape9{ background-color: #3EAD7B;}
+.shape3,.shape4,.shape10{ background-color: #2F5281;}
+.shape6,.shape8,.shape11{ background-color: #527D07;}
+.shape5,.shape7,.shape12{ background-color: #B67C3D;}
+.shape13{background-color: #3EAD7B;}
+
+/* skill position */
+.shape1{ top: 8%; left: 20%; }
+.shape2{ top: 18%; left: 70%; }
+.shape3{ top: 28%; left: 40%; }
+.shape4{ top: 13%; left: 50%; }
+.shape5{ top: 58%; left: 30%; }
+.shape6{ top: 75%; left: 60%; }
+.shape7{ top: 55%; left: 76%; }
+.shape8{ top: 65%; left: 10%; }
+.shape9{ top: 40%; left: 3%; }
+.shape10{ top: 40%; left: 65%; }
+.shape11{ top: 77%; left: 45%; }
+.shape12{ top: 35%; left: 12%; }
+.shape13{ top: 50%; left: 55%; }
+
+footer{ 
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+.container{
+  width: 97%;
+  height: 95%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main-color);
+  color: var(--sub-color);
+  border-radius: 40px;
+}
+footer  .last{
+  width: 97%;
+  height: 95%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+.footer-wrap > h2{
+  font-size: 9rem;
+  font-weight: bolder;
+  margin-top: 3rem;
+  padding: 3rem 0;
+}
+.footer-wrap > p{
+  font-size: 2rem;
+}
+.footer-wrap > ul > li:hover{
+  filter: brightness(80%);
+}
+.footer-wrap > ul > li{
+  background-color: var(--sub-color);
+  color: var(--main-color);
+  display: inline-block;
+  border-radius: 3rem;
+  padding: 1rem 3rem;
+  font-style: 2rem;
 }
