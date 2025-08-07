@@ -1,0 +1,17 @@
+const imgList = [
+  {type:'odd',img:'./images/p1.jpg',title:'Title-1', desc:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa eius nemo repellat fuga ut, possimus quisquam eveniet error'},
+  {type:'even',img:'./images/p2.jpg',title:'Title-1', desc:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa eius nemo repellat fuga ut, possimus quisquam eveniet error'},
+  {type:'odd',img:'./images/p3.jpg',title:'Title-1', desc:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa eius nemo repellat fuga ut, possimus quisquam eveniet error'},
+  {type:'even',img:'./images/p4.jpg',title:'Title-1', desc:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa eius nemo repellat fuga ut, possimus quisquam eveniet error'},
+  {type:'odd',img:'./images/p5.jpg',title:'Title-1', desc:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa eius nemo repellat fuga ut, possimus quisquam eveniet error'},
+  {type:'even',img:'./images/p6.jpg',title:'Title-1', desc:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa eius nemo repellat fuga ut, possimus quisquam eveniet error'},
+  {type:'odd',img:'./images/p7.jpg',title:'Title-1', desc:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa eius nemo repellat fuga ut, possimus quisquam eveniet error'},
+  {type:'even',img:'./images/p8.jpg',title:'Title-1', desc:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa eius nemo repellat fuga ut, possimus quisquam eveniet error'},
+  {type:'odd',img:'./images/p9.jpg',title:'Title-1', desc:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa eius nemo repellat fuga ut, possimus quisquam eveniet error'},
+  {type:'even',img:'./images/p10.jpg',title:'Title-1', desc:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa eius nemo repellat fuga ut, possimus quisquam eveniet error'},
+  {type:'odd',img:'./images/p11.jpg',title:'Title-1', desc:'LLorem ipsum dolor sit amet consectetur adipisicing elit. Culpa eius nemo repellat fuga ut, possimus quisquam eveniet error'},
+  {type:'even',img:'./images/p12.jpg',title:'Title-1', desc:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa eius nemo repellat fuga ut, possimus quisquam eveniet error'},
+  {type:'odd',img:'./images/p13.jpg',title:'Title-1', desc:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa eius nemo repellat fuga ut, possimus quisquam eveniet error'},
+  {type:'even',img:'./images/p14.jpg',title:'Title-1', desc:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa eius nemo repellat fuga ut, possimus quisquam eveniet error'},
+  {type:'odd',img:'./images/p15.jpg',title:'Title-1', desc:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa eius nemo repellat fuga ut, possimus quisquam eveniet error'},
+];
